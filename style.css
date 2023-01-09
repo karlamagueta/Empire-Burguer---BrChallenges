@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+@import 'herobanner.css';
+@font-face {
+    font-family: 'poppins';
+    src: url('Poppins-Regular.ttf');
+}
+
+body {
+    background-color: rgb(82, 82, 82);
+    margin: 0px;
+}
+
+

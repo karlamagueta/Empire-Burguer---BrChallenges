@@ -3,6 +3,7 @@
     display: block;
     background-image: url(./Blizzard/Arquivos/banner-bg2.jpg);
     height: 736px;
+    width: auto;
 }
 
 header {
@@ -26,6 +27,7 @@ nav {
     flex-direction: row;
     align-items: center;
     height: 96px;
+    width: fit-content;
 }
 
 nav ul {
@@ -58,7 +60,7 @@ nav ul li:hover {
 }
 
 .criar-logar a {
-    margin: 20px;
+    margin-left: 20px;
     font-family: 'poppins';
     font-size: 14px;
     color: white;
@@ -79,6 +81,10 @@ nav ul li:hover {
     font-family: 'Poppins';
     padding: 10px 20px;
     border-radius: 5px;;
+}
+
+.burguer {
+    display: none;
 }
 
 .logar:hover {
@@ -175,6 +181,15 @@ main {
     left: 80px;
  }
 
+ .grid-column-3 img {
+    filter: grayscale(40%);
+ }
+
+ .grid-column-3 img:hover {
+    transition: 0.2s;
+    filter:none;
+ }
+
  .circulo {
     left: 35px;
     top: 0px;
@@ -187,7 +202,7 @@ main {
     top: 15px;
  }
 
- main::after {
+header::after {
     content: '';
     height: 3px;
     width: 560px;
@@ -207,32 +222,88 @@ main {
     left: 120px;
  }
 
-
  @media (max-width:1440px) {
-    .background-banner {
-        display: flex;
-        max-width: 100%;
+
+    header {
+        padding-left: 60px;
+    }
+
+    main::before {
+        left: 60px;
+    }
+
+    main {
+        margin-left: -60px;
+    }
+
+    .background-banner img {
+        background-repeat: no-repeat;
         background-size: cover;
-        justify-self: center;
+        background-position: center;
     }
 
-    .conta {
-        font-size: 10px;
-    }
-
-    nav ul {
+    .menu ul {
         padding-left: 20px;
+        white-space: nowrap;
     }
 
     nav ul li {
         width: 100%;
-        padding: 10px;
+    }
+
+    .conta {
+        white-space: nowrap;
+    }
+
+    .logar {
+        white-space: nowrap;
     }
 
     .menu {
         margin-left: 0px;
+
     }
-    
+
+    .h1-banner {
+        margin-top: -30px;
+        line-height: 1.2;
+    }
+
+    .grid-column-3 p {
+        white-space: nowrap;
+    }
+
+ }
+
+ @media (max-width: 962px) {
+
+    header {
+        grid-template-columns: 1fr 1fr;
+        padding-right: 0px;
+
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burguer {
+        display: block;
+    }
+
+    .criar-logar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    .criar-logar .burguer {
+        padding: 20px;
+    }
+ }
+
+ @media (max-width:768px) {
     main {
         grid-template-columns: 3fr 2fr;
     }
@@ -246,6 +317,7 @@ main {
     .h1-banner {
         grid-column: 1;
         margin: 0px;
+        margin-top: -50px;
         line-height: 1.2;
     }
 
@@ -263,6 +335,8 @@ main {
         margin: 20px 0px;
     }
 
-
-
+    .grid-column-3 p {
+        margin-left: 175px;
+        margin-right: 0px;
+    }
  }

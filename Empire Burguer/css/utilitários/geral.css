@@ -1,0 +1,33 @@
+body {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.conteiner-1200 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 10px 20px; 
+    text-transform: capitalize;
+    box-shadow: ;
+}
+
+.red {
+    background-color: var(--p6);
+}
+.yellow {
+    background-color: var(--p1);
+}
+
+a, ul, li, h1, h2, p, h3{
+    text-transform: none;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}

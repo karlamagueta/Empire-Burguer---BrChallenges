@@ -1,0 +1,107 @@
+body {
+    position: relative;
+}
+
+.banner-hero img {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+
+
+}
+
+.banner-hero {
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.menu-blur {
+    backdrop-filter: blur(5px);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--p3);
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    color: var(--p5);
+}
+
+.menu ul li {
+    text-transform: uppercase;
+    padding: 20px;
+    flex-wrap: nowrap;
+}
+
+.menu-centro a:hover {
+    font-weight: 700;
+    transition: .3s;
+}
+
+.menu-esquerda {
+    align-items: center;
+}
+
+.menu-esquerda .whatsapp {
+    position: absolute;
+    top:11px;
+    left: 16px;
+}
+
+.menu-esquerda .whatsapp::before {
+    content: 'teste';
+    width: 5px;
+    height: 10px;
+    border-radius: 50%;
+    background: #8800ff;
+    position: absolute;
+}
+
+.menu-esquerda .btn {
+    padding-left: 40px;
+}
+
+.menu-esquerda li a:nth-child(1) {
+    position: relative;
+}
+
+
+.menu-esquerda ul li::after {
+    content: 'teste';
+    background: #8800ff;
+    border-radius: 50%;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+}
+
+
+.texto-intro {
+    padding-top: 60px;
+}
+
+.texto-intro h1 {
+    font-family: 'lilita';
+    font-weight: 400;
+    font-size: 4.5rem;
+}
+
+.texto-intro p {
+    padding-bottom: 20px;
+
+}
+
+.texto-intro p span {
+    background-color: var(--p1);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+/* Ajustar banner hero para responsivo */

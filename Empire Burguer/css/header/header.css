@@ -2,17 +2,18 @@ body {
     position: relative;
 }
 
+.banner-hero {
+    display: block;
+    background-size: 100% auto;
+    box-sizing: border-box;
+    object-fit: cover;
+}
 .banner-hero img {
     z-index: -1;
     position: absolute;
-    width: 100%;
 
 
-}
 
-.banner-hero {
-    box-sizing: border-box;
-    object-fit: cover;
 }
 
 .menu-blur {

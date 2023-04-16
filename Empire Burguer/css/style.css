@@ -7,7 +7,9 @@
 
 /* Header */
 @import '/css/header/header.css';
-@import '/css/header/ofertas.css';
+
+/* Ofertas */
+@import '/css/ofertas/ofertas.css';
 
 
 

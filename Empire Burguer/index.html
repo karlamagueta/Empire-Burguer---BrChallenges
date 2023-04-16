@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empire Burguer</title>
+    <link rel="shortcut icon" href="/icons/burger.svg" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <style>
         
@@ -12,10 +13,14 @@
 </head>
 <body>
     <header>
-        <div class="banner-hero"><img src="/imagens/banner-hero.png" alt=""></div>
+        <picture class="banner-hero">
+            <source media="(max-width: 500px)" srcset="/imagens/banner-mobile-1.png">
+            <img src="/imagens/banner-hero.png" alt="Imagem do Hamburguer King Burguer">
+        </picture>
         <nav class="menu-blur">
             <div class="menu conteiner-1200">
-                <a class="logo" href="./index.html"><img src="/imagens/logo.png" alt="Logo Empire Burguer" width=" Imagem de um hamburguer suculento"></a>
+            
+                <a class="logo" href="./index.html"><img src="/imagens/logo.png" alt="Logo Empire Burguer" width=250px></a>
                 <ul class="menu-centro font-2-m">
                     <li><a href="./">Home</a></li>
                     <li><a href="./">Promoção</a></li>
@@ -26,7 +31,7 @@
                     <li><a href="https://www.ifood.com.br"><img src="/icons/ifood.svg" alt="Ifood"></a></li>
                     <li><a href="https://www.instagram.com/karlamagueta"><img src="/icons/instagram.svg" alt="Instagram"></a></li>
                     <li><a class=" btn yellow font-2-s p5" href="https://www.wa.me/5511999999999"><img class="whatsapp " src="/icons/whatsapp.svg" width="16px" alt="Ifood"> Contato</a></li>
-                </ul>
+                </ul>                      
             </div>
         </nav>
         <div class="conteiner-1200 texto-intro">

@@ -3,17 +3,16 @@ body {
 }
 
 .banner-hero {
-    display: block;
-    background-size: 100% auto;
     box-sizing: border-box;
-    object-fit: cover;
+    width: 100%;
 }
 .banner-hero img {
     z-index: -1;
     position: absolute;
-
-
-
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
 }
 
 .menu-blur {
@@ -38,16 +37,21 @@ body {
 
 .menu ul li {
     text-transform: uppercase;
-    padding: 20px;
+    padding: 20px 10px;
     flex-wrap: nowrap;
 }
 
+.menu-centro a {
+    font-weight: 500;
+}
+
 .menu-centro a:hover {
-    font-weight: 700;
+    font-weight: 800;
     transition: .3s;
 }
 
 .menu-esquerda {
+    display: flex;
     align-items: center;
 }
 
@@ -57,13 +61,14 @@ body {
     left: 16px;
 }
 
-.menu-esquerda .whatsapp::before {
-    content: 'teste';
-    width: 5px;
-    height: 10px;
-    border-radius: 50%;
-    background: #8800ff;
+.menu-esquerda .btn::before {
+    content: '';
+    width: 1px;
+    height: 50px;
+    background: var(--p3);
     position: absolute;
+    left: -10px;
+    top: -5px;
 }
 
 .menu-esquerda .btn {
@@ -87,6 +92,7 @@ body {
 
 .texto-intro {
     padding-top: 60px;
+    padding-left: 20px;
 }
 
 .texto-intro h1 {
@@ -105,4 +111,80 @@ body {
     padding: 2px 4px;
     border-radius: 4px;
 }
-/* Ajustar banner hero para responsivo */
+
+
+@media (max-width:950px) {
+    .texto-intro h1 {
+        font-size: 3.5rem;
+    }
+
+    .menu ul li {
+        padding: 10px 5px;
+    }
+
+    .menu-centro {
+        opacity: 0;
+    }
+
+    .menu-esquerda {
+        opacity: 0;
+    }
+}
+
+@media (max-width:650px) {
+    .texto-intro h1 {
+        font-size: 2.75rem;
+    }
+
+    .texto-intro p {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width:500px) {
+    .texto-intro {
+        margin: 0 auto;
+        justify-self: center;
+        padding: 40px 20px;
+    }
+
+    .banner-hero img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .texto-intro {
+        padding: 10px 10px;
+    }
+
+    .texto-intro h2 {
+        text-transform: 1.5rem;
+        font-weight: 500;
+    }
+
+    .texto-intro h1 {
+        font-size: 2rem;
+    }
+
+    .texto-intro p {
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+}
+
+
+/* Ajustar menu hamburguer */
+
+
+
+
+
+/* ___ Invasão do @rochacbruno
+ from openai import ChatGPT
+gpt = ChatGPT()
+gpt.make_css(alinhar, deixar bonito).responsivo().animate()
+ */
+

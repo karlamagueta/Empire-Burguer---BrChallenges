@@ -1,5 +1,6 @@
 body {
     background-color: var(--bg1);
+    max-width: 100%;
 }
 .infobox {
     max-width: 930px;
@@ -48,22 +49,169 @@ body {
 
 .infobox-item div img {
     position: absolute;
-    top: 10px;
-    left: 14px;
+    top: 12px;
+    left: 16px;
 }
 
-.infobox-item h2:before {
+.separador-infobox h2:before {
     position: absolute;
     content: '';
     height: 83px;
     width: 1px;
     left: 260px;
-    background-color: rgba(73, 46, 21, 0.15);
+    background-color: rgba(232, 35, 35, 0.15);
 }
 
-.infobox-item h2::before:nth-child() {
-    opacity: 0;
+/* * {
+border: 1px solid red;
+ */
+
+@media (max-width: 900px) {
+    .infobox {
+        grid-template-columns: 1fr;
+        margin: 220px 40px 0 40px;
+    }
+
+    .separador-infobox h2:before {
+        width: 100%;
+        height: 1px;
+        top: 80px;
+        left: -20px;
+    }
+}
+
+@media (max-width:500px) {
+    .infobox {
+        margin: 580px 20px 0 20px;
+    }
 }
 
 
-/* ajustar no infobox o separador do ultimo infobox-item */
+/* ----Grid Ofertas--- */
+.ofertas-especiais {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.ofertas-especiais .titulo-ofertas {
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    padding-bottom: 4px;
+}
+
+.ofertas-especiais p { 
+    padding-bottom: 16px;
+}
+
+.grid-ofertas {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.grid-ofertas div div img {
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.grid-ofertas h3 {
+    display: flex;
+    line-height: 0.3;
+    flex-direction: column;
+}
+
+.grid-ofertas h3 span {
+    text-transform: uppercase;
+    font-size: 2.75rem;
+}
+
+.oferta-1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    position: relative;
+}
+
+.oferta-1 h3 {
+    position: absolute;
+    top: 360px;
+    left: 660px;
+}
+
+.oferta-1 h2, .oferta-1 span, .oferta-1 h3 {
+    color: rgba(255, 255, 255, 0.9) ;
+}
+
+.oferta-2 h2, .oferta-2 span, .oferta-2 h3,
+.oferta-3 h2, .oferta-3 span, .oferta-3 h3 {
+    color: var(--p5);
+}
+
+.oferta-2, .oferta-3 {
+    grid-column: 2;
+}
+
+.oferta-texto-1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* ARRUMA ESSA BAGAÇA */
+.oferta-1-img {
+    box-sizing: border-box;
+    height: 100%;
+}
+.oferta-1-img img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/* ----------- */
+
+
+.oferta-texto-1 h2, .oferta-texto-2 h2, .oferta-texto-3 h2 {
+    text-transform: uppercase;
+}
+
+.oferta-2 {
+    position: relative;
+}
+
+.oferta-texto-2 {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.oferta-texto-2 h2, .oferta-texto-3 h2 {
+    font-size: 1.25rem;
+}
+
+.oferta-texto-2 span, .oferta-texto-3 span {
+    font-size: 1rem;
+}
+
+.oferta-texto-3 {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.oferta-3 {
+    position: relative;
+}
+
+@media (max-width: 600px) {
+
+}
+
+
+/* grid primeira imagem responsivo com object fit */
+
+
+/* A altura vai ficar 100%, mas 100 do pai dela, onde ela está. As vezes esse block onde tem essas 3 imagens dela tem uma certa altura, 100% de height na imagem vai ficar nesse limite ai */

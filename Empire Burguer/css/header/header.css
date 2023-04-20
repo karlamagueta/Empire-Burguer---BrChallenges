@@ -120,7 +120,7 @@ body {
     }
 
     .menu ul li {
-        padding: 10px 5px;
+        padding: 0px 5px;
     }
 
     .menu-centro {
@@ -151,9 +151,18 @@ body {
     }
 
     .banner-hero img {
-        height: auto;
+        display: block;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .banner-hero {
+        box-sizing: border-box;
         width: 100%;
     }
+    
 }
 
 @media (max-width: 380px) {

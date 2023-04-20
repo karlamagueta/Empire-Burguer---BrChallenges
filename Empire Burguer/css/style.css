@@ -11,10 +11,12 @@
 /* Ofertas */
 @import '/css/ofertas/ofertas.css';
 
+/* Horários */
+@import '/css/horarios/horarios.css';
 
 
-
-
+/* Cardapio */
+@import '/css/cardapio/cardapio.css';
 
 
 

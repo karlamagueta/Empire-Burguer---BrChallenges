@@ -1,0 +1,30 @@
+#cardapio {
+    background-color: #3B200B ;
+    margin-bottom: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-right: 30px;
+}
+
+.cardapio-direito h2 {
+    padding-top: 70px;
+}
+.cardapio-direito ul {
+    color: #FAE4D0 ;
+}
+
+.cardapio-direito ul li {
+    margin-top: 32px;
+}
+
+.cardapio-direito h3 {    
+    max-width: 50ch;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardapio-direito ul li p {
+    max-width: 50ch;
+}
+

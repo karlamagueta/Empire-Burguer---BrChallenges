@@ -1,0 +1,137 @@
+.horario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 20px 0px 20px 40px;
+    margin-bottom: 60px;
+}
+
+.card-horario {
+    background-color: var(--p6);
+    border-radius: 6px;
+    margin: -20px;
+    box-shadow: 0px 4px 40px rgba(179, 155, 132, 0.5);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.card-horario ul, .card-horario h2{
+    grid-column: 2;
+    padding-left: 100px;
+}
+
+.card-horario h2{
+    color: rgba(29, 6, 5, 0.69);
+}
+
+.horariofuncionamento {
+    text-transform: uppercase;
+}
+
+.icone-horario {
+    display: block;
+    justify-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    left: 40px;
+    top: 30px;
+}
+
+.icone-horario::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    background: rgba(195, 6, 6, 0.922);
+    top: -14px;
+    left: -18px;
+}
+
+.icone-horario::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 90px;
+    width: 2px;
+    background: rgba(178, 6, 6, 0.922);
+    top: -14px;
+    left: 85px;
+}
+
+.horario-texto h2, .horario-texto ul {
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    white-space: nowrap;
+}
+
+.horario-texto p {
+    color: rgba(29, 6, 5, 0.69)
+}
+
+@media (max-width: 1000px) {
+    .horario {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .card-horario {
+        max-width: 60%;
+        margin: -20px;
+    }
+
+    .horario-texto {
+        text-align: center;
+    }
+
+}
+
+@media (max-width:730px) {
+    .horario {
+        padding: 20px;
+    }
+
+    .card-horario {
+        max-width: 80%;
+        margin: -20px;
+    }
+}
+
+@media (max-width:600px) {
+    .card-horario {
+        height: 80px;
+    }
+
+    .horariofuncionamento {
+        font-size: 1rem;
+    }
+
+    .card-horario ul li {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:450px) {
+    .card-horario {
+        height: 120px;
+    }
+
+    .icone-horario {
+        top: 50px;
+    }
+    
+    .icone-horario::after {
+        height: 120px;
+        top: -30px;
+    }
+
+
+

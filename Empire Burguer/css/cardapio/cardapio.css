@@ -1,15 +1,30 @@
-#cardapio {
-    background-color: #3B200B ;
+.cardapio-bg {
+    background-image: url('/imagens/banner-menu.png');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-color: #3c1f02;
+    background-size: 50%;
     margin-bottom: 250px;
+    box-sizing: border-box;
+}
+
+.cardapio-conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    padding-right: 30px;
 }
 
-.cardapio-direito h2 {
-    padding-top: 70px;
+.cardapio-direito, .cardapio-esquerdo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
 }
+
+.cardapio-direito {
+    padding-top: 40px ;
+    margin-bottom: 40px;
+}
+
 .cardapio-direito ul {
     color: #FAE4D0 ;
 }
@@ -27,4 +42,46 @@
 .cardapio-direito ul li p {
     max-width: 50ch;
 }
+
+.cardapio-direito ul li h3 span{   
+    color: #e1bf9f;
+
+}
+
+.cardapio-direito ul li h3     {
+    content: '';
+    border-bottom: 1px dashed #FAE4D0;
+}
+
+
+/*  Cardapio Esquerda */
+
+.cardapio-esquerdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 130px;
+}
+
+.cardapio-esquerdo h2 span{
+    background-color: var(--p1);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.cardapio-esquerdo h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.cardapio-esquerdo a {
+    max-width: max-content;
+    box-shadow: 3px 3px 10px #40210493 ;
+}
+
+.cardapio-esquerdo a:hover {
+    background-color: #be0606; 
+    transition: .3s;
+}
+
 

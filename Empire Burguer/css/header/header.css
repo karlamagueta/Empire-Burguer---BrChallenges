@@ -113,6 +113,14 @@ body {
     border-radius: 4px;
 }
 
+.texto-intro a {
+    box-shadow: 1px 1px 5px #40210493; 
+}
+
+.texto-intro a:hover {
+    background-color: #be0606; 
+    transition: .3s;
+}
 
 @media (max-width:950px) {
     .texto-intro h1 {

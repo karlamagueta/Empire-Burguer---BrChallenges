@@ -1,17 +1,27 @@
-.cardapio-bg {
+.cardapio-bg-esq{
+    display: flex;
+    flex: 1;
     background-image: url('/imagens/banner-menu.png');
     height: 500px;
     background-repeat: no-repeat;
     background-color: #3c1f02;
-    background-size: 50%;
-    margin-bottom: 250px;
+    background-size: 50% cover;
+    box-sizing: border-box;
+}
+
+.cardapio-bg-dir{
+    display: flex;
+    flex: 1;
+    height: 500px;
+    background-repeat: repeat;
+    background-color: #3c1f02;
+    width: 100%;
     box-sizing: border-box;
 }
 
 .cardapio-conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
 }
 
 .cardapio-direito, .cardapio-esquerdo {
@@ -19,40 +29,52 @@
     margin-right: auto;
     max-width: 1200px;
 }
+ /* Cardapio Direito */
+
 
 .cardapio-direito {
+    display: flex;
     padding-top: 40px ;
     margin-bottom: 40px;
+    align-items: center;
 }
 
 .cardapio-direito ul {
     color: #FAE4D0 ;
+    padding-bottom: 1.25rem;
 }
 
 .cardapio-direito ul li {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
-.cardapio-direito h3 {    
+.produto {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.produto h3 {
+    text-transform: uppercase;
+}
+
+.cardapio-direito span {    
     max-width: 50ch;
     display: flex;
-    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .cardapio-direito ul li p {
     max-width: 50ch;
 }
 
-.cardapio-direito ul li h3 span{   
-    color: #e1bf9f;
 
-}
-
-.cardapio-direito ul li h3     {
+.produto h3::after{
+    flex: 1;
     content: '';
     border-bottom: 1px dashed #FAE4D0;
 }
-
 
 /*  Cardapio Esquerda */
 
@@ -60,28 +82,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 130px;
+    padding-left: 23.4375rem;
+    padding-right: 1.25rem;
 }
 
 .cardapio-esquerdo h2 span{
     background-color: var(--p1);
-    border-radius: 4px;
-    padding: 2px 4px;
+    border-radius: .25rem;
+    padding: .125rem .25rem;
 }
 
 .cardapio-esquerdo h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.cardapio-esquerdo p {
+    padding-bottom: 20px;
 }
 
 .cardapio-esquerdo a {
     max-width: max-content;
-    box-shadow: 3px 3px 10px #40210493 ;
+    box-shadow: 3px 3px 10px #40210493;
 }
 
 .cardapio-esquerdo a:hover {
     background-color: #be0606; 
     transition: .3s;
 }
-
-

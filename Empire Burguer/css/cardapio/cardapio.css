@@ -1,3 +1,7 @@
+/* * {
+    border: 3px solid red;
+} */
+
 .cardapio-bg-esq{
     display: flex;
     flex: 1;
@@ -31,12 +35,16 @@
 }
  /* Cardapio Direito */
 
-
 .cardapio-direito {
     display: flex;
     padding-top: 40px ;
+    padding: 1.25rem;
     margin-bottom: 40px;
     align-items: center;
+}
+
+.cardapio-direito h2 {
+    text-transform: uppercase;
 }
 
 .cardapio-direito ul {
@@ -93,13 +101,14 @@
 }
 
 .cardapio-esquerdo h2 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     text-transform: uppercase;
     padding-bottom: 10px;
 }
 
 .cardapio-esquerdo p {
     padding-bottom: 20px;
+    font-size: 1rem;
 }
 
 .cardapio-esquerdo a {
@@ -110,4 +119,115 @@
 .cardapio-esquerdo a:hover {
     background-color: #be0606; 
     transition: .3s;
+}
+
+@media (max-width:1100px) {
+    .cardapio-bg-esq {
+        object-fit: cover;
+        background-position: 30% 50%;
+    }
+
+    .cardapio-esquerdo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 16rem;
+        padding-right: 1.25rem;
+    }
+
+    .cardapio-esquerdo h2 span {
+        display: flex;
+        max-width: max-content;
+    }
+
+    .cardapio-direito h2 {
+        font-size: 1.5rem;
+    }
+
+    .cardapio-direito ul li h3 {
+        font-size: 1.25rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .cardapio-direito p {
+        font-size: 0.875rem;
+    }
+}
+
+ @media (max-width:900px) {
+
+    .cardapio-esquerdo {
+        padding-left: 12rem;
+    }
+    
+    .cardapio-esquerdo h2 {
+        font-size: 1.25rem;
+    }
+
+    .cardapio-esquerdo p {
+        font-size: 0.85rem;
+    }
+
+    .cardapio-esquerdo a {
+        font-size: 0.85rem;
+    }
+
+    .cardapio-direito h2 {
+        font-size: 1.25rem;
+    }
+
+    .cardapio-direito ul li h3 {
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+
+} 
+@media (max-width:800px) {
+
+    .cardapio-bg-esq {
+        height:250px;
+        background-size: cover;
+        background-position: 70% 50%;
+    }
+
+    .cardapio-bg-dir {
+        height: 440px;
+    }
+    .cardapio-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .cardapio-esquerdo {
+        padding-left: 18rem;
+    }
+
+    .cardapio-esquerdo p {
+        padding-right: 3.125rem;
+    }
+
+    .cardapio-direito {
+        padding: 0px;
+    }
+    
+}
+
+@media (max-width:550px) {
+    .cardapio-esquerdo {
+        padding-left: 13.5rem;
+    }
+
+    .cardapio-esquerdo h2 {
+        font-size: 1rem;
+    }
+
+    .cardapio-esquerdo p {
+        font-size: 0.75rem;
+        padding-right: 2rem;
+    }
+
+    .cardapio-direito {
+        padding: 0 20px;
+    }
+
+    
 }

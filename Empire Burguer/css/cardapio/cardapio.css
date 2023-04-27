@@ -69,19 +69,22 @@
 .cardapio-direito span {    
     max-width: 50ch;
     display: flex;
-    flex-grow: 0;
-    flex-shrink: 0;
 }
 
 .cardapio-direito ul li p {
     max-width: 50ch;
 }
 
-
-.produto h3::after{
+.produto::after{
+    display: flex;
     flex: 1;
     content: '';
-    border-bottom: 1px dashed #FAE4D0;
+    border-bottom: 2px dashed #FAE4D0;
+}
+
+.produtoepreco {
+    display: flex;
+    flex: 1;
 }
 
 /*  Cardapio Esquerda */
@@ -228,6 +231,36 @@
     .cardapio-direito {
         padding: 0 20px;
     }
+}
 
+@media (max-width:400px) {
+    .cardapio-esquerdo {
+        padding-left: 9rem;
+    }
+
+    .cardapio-esquerdo p {
+        font-size: 0.65rem;
+        padding-right: 2rem;
+    }
+
+    .cardapio-direito {
+        height: 500px;
+    }
+
+    .cardapio-direito h2 {
+        padding-top: 40px;
+    }
+
+    .cardapio-direito ul {
+        padding-bottom: 40px;
+    }
+
+    .cardapio-direito h3 {
+        font-size: 0.875rem;
+    }
+
+    .cardapio-direito p {
+        font-size: 0.7rem;
+    }
     
 }

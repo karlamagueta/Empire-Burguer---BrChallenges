@@ -18,7 +18,11 @@
 /* Cardapio */
 @import '/css/cardapio/cardapio.css';
 
+/* Atendimento */
+@import '/css/atendimento/atendimento.css';
 
+/* Entregas */
+@import '/css/entregas/entregas.css';
 
 
 

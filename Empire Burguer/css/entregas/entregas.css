@@ -1,7 +1,7 @@
 .entregas {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-top: 1px solid rgba(29, 6, 5, 0.15);
+/*     border-top: 1px solid rgba(29, 6, 5, 0.15); */
     align-items: center;
     gap: 20px;
     padding: 60px 20px;
@@ -19,13 +19,19 @@
     gap: 40px;
     flex: 1;
     background-color: var(--w);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 15px 25px;
     border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(179, 155, 132, 0.5);
-    z-index: -2;
+    box-shadow: 0px 2px 4px rgba(179, 155, 132, 0.309);
     position: relative;
 }
+
+.entregas-conteudo ul li:hover {
+    box-shadow: 0px 4px 30px rgba(179, 155, 132, 0.5);
+    transition: .4s;
+}
+
+
 .entregas-conteudo ul li h3 {
     text-transform: uppercase;
     font-size: 1.3rem;
@@ -54,7 +60,7 @@
     content: '';
     width: 1.5px;
     height: 50px;
-    background-color: #1d060524;
+    background-color: #FAE2CB;
     position: absolute;
     z-index: -1;
     left: 55px;
@@ -101,7 +107,98 @@
         border-top: 80;
     }
 
-    .entregas-conteudo {
+    .entregas-lista {
+        border-left: 1.5px solid #FAE2CB;
+        margin-left: 15px;
+        padding-left: 15px;
+    }
+
+    .entregas-conteudo ul {
+        display: grid;
+        grid-template-columns: 1fr;
         order: 1; 
+        gap: 10px;
+    }
+
+    .entregas-img {
+        max-height: 300px;
+    }
+
+    .entregas-img img {
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    .entregas-icone::before {
+        left: -10px;
+        top: -5px;
+    }
+    
+    .entregas-icone::after {
+        display: none;
+    }
+    
+    .entregas-icone {
+        z-index: 0;
+        position: relative;
+    }
+    
+    .entregas-icone img {
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        top: 5px;
+    }
+
+    .entregas ul li {
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width:500px) {
+    .entregas-img {
+        order: -1; 
     }
 }
+
+
+/* -------- faça seu pedido */
+
+.card-pedido {
+    background-color: var(--p6);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-radius: .625rem;
+
+    margin-bottom: 300px ;
+}
+
+.card-pedido-conteudo {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-pedido-conteudo a {
+    background-color: #FAE2CB;
+    max-width: max-content;
+    margin: 40px;
+    display: flex;
+}
+
+.card-pedido-conteudo h2 {
+    text-transform: uppercase;
+}
+
+.card-pedido-conteudo p {
+    color: #FAE2CB;
+    max-width: 60ch;
+    font-size: 1rem;
+}
+
+.card-pedido-img {
+    margin: 40px;
+}
+

@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="home">
         <picture class="banner-hero">
             <source media="(max-width: 500px)" srcset="/imagens/banner-mobile-1.png">
             <img src="/imagens/banner-hero.png" alt="Imagem do Hamburguer King Burguer">
@@ -23,9 +23,9 @@
                 <a class="logo" href="./index.html"><img src="/imagens/logo.png" alt="Logo Empire Burguer" width=250px></a>
                 <ul class="menu-centro font-2-m">
                     <li><a href="./">Home</a></li>
-                    <li><a href="./">Promoção</a></li>
-                    <li><a href="./">Cardápio</a></li>
-                    <li><a href="./">Localização</a></li>
+                    <li><a href="#ofertas">Promoção</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
                 </ul>
                 <ul class="menu-esquerda">
                     <li><a href="https://www.ifood.com.br"><img src="/icons/ifood.svg" alt="Ifood"></a></li>
@@ -106,7 +106,7 @@
             <h2 class="font-1-xl p6">#Empireburguer</h2>
         </div>
     </section>
-    <section id="cardapio" class="">
+    <section id="cardapio">
         <div class=" cardapio-conteudo">
             <div class="cardapio-esquerdo cardapio-bg-esq">
             <!--             <div class="cardapio-img">
@@ -229,12 +229,33 @@
             </div>
             <div class="card-pedido-conteudo">
                 <div>
-                    <h2 class="font-1-l p5">Faça seu pedido agora mesmo</h2>
+                    <h2 class="font-1-l">Faça seu pedido agora mesmo</h2>
                     <p class="font-2-m">Venha saborear a melhore experiência de hamburguer artesanal do <strong>Empires Burguer</strong>, vegano, zero lactose, sem gluten, e crossfiteiro.</p>
                 </div>
                 <a class="btn p6 font-2-m" href="./">Solicitar pedido</a>
             </div>
         </div>
     </section>
+    <section id="localizacao">
+        <div class="conteiner-1200 localizacao-conteudo">
+            <h2 class="font-1-xl p5">onde fica o nosso castelo</h2>
+            <p class="font-2-l">Estaremos de portas abertas para a nossa realeza.</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4741.346051315974!2d2.243170885047466!3d48.979022854848246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6679452307065%3A0xa2ea7b01fac1048b!2sEMPIRE%20BURGER!5e0!3m2!1sen!2spt!4v1683040124079!5m2!1sen!2spt" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <footer class="conteiner-1200" id="footer">
+        <div class="footer-1">
+            <div><img src="/imagens/logo.png" alt=" Logo Empire Burguer" height="30px"></div>
+            <ul class="font-2-m p5">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </div>
+        <div class="footer-2">
+            <p class="font-2-m p5"><strong>2023 © EmpireBurger.</strong> Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

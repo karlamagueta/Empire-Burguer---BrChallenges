@@ -1,0 +1,15 @@
+
+#localizacao {
+    margin-bottom: 32px;
+}
+.localizacao-conteudo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.localizacao-conteudo h2 {
+    margin-top: 60px;
+    text-transform: uppercase;
+}

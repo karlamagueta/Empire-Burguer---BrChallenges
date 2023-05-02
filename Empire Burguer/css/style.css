@@ -24,5 +24,8 @@
 /* Entregas */
 @import '/css/entregas/entregas.css';
 
+/* Localização */
+@import '/css/localizacao/localizacao.css';
 
-
+/* Footer */
+@import '/css/footer/footer.css';

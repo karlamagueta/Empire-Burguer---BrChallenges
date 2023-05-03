@@ -1,7 +1,3 @@
-/* * {
-    border: 1px solid red;
-} */
-
 
 body {
     position: relative;
@@ -25,14 +21,6 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    border-bottom: 1px solid var(--p3);
-}
 
 .menu ul {
     display: flex;
@@ -51,9 +39,10 @@ body {
     font-weight: 500;
 }
 
-.menu-centro a:hover {
+.menu-centro li:hover {
     transition: .3s;
     transform: scale(1.04);
+    font-weight: 700;
 } 
 
 .menu-esquerda {
@@ -127,6 +116,50 @@ body {
     transition: .3s;
 }
 
+.hamburger {
+    position: absolute;
+    z-index: 101;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: none;
+    background: rgba(255, 255, 255, 0.574);
+    cursor: pointer;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--p3);
+}
+
+  .menu-hamburguer {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(80, 72, 72, 0.415);
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+  }
+
+  .showMenu {
+    transform: translateY(0);
+  }
+
+
 @media (max-width:950px) {
     .texto-intro h1 {
         font-size: 3.5rem;
@@ -136,13 +169,6 @@ body {
         padding: 0px 5px;
     }
 
-    .menu-centro {
-        opacity: 0;
-    }
-
-    .menu-esquerda {
-        opacity: 0;
-    }
 }
 
 @media (max-width:650px) {
@@ -197,12 +223,6 @@ body {
         font-weight: 200;
     }
 }
-
-
-/* Ajustar menu hamburguer */
-
-
-
 
 
 /* ___ Invasão do @rochacbruno

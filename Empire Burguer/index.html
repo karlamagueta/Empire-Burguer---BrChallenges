@@ -21,17 +21,21 @@
             <div class="menu conteiner-1200">
             
                 <a class="logo" href="./index.html"><img src="/imagens/logo.png" alt="Logo Empire Burguer" width=250px></a>
-                <ul class="menu-centro font-2-m">
-                    <li><a href="./">Home</a></li>
-                    <li><a href="#ofertas">Promoção</a></li>
-                    <li><a href="#cardapio">Cardápio</a></li>
-                    <li><a href="#localizacao">Localização</a></li>
+                <ul class="menu-centro menu-hamburguer font-2-m">
+                    <li class="menuItem"><a href="./">Home</a></li>
+                    <li class="menuItem"><a href="#ofertas">Promoção</a></li>
+                    <li class="menuItem"><a href="#cardapio">Cardápio</a></li>
+                    <li class="menuItem"><a href="#localizacao">Localização</a></li>
                 </ul>
                 <ul class="menu-esquerda">
                     <li><a href="https://www.ifood.com.br"><img src="/icons/ifood.svg" alt="Ifood"></a></li>
                     <li><a href="https://www.instagram.com/karlamagueta"><img src="/icons/instagram.svg" alt="Instagram"></a></li>
                     <li><a class=" btn yellow font-2-s p5" href="https://www.wa.me/5511999999999"><img class="whatsapp " src="/icons/whatsapp.svg" width="16px" alt="Ifood"> Contato</a></li>
-                </ul>                      
+                </ul>
+                <button class="hamburguer">
+                    <i class="menuIcon material-icons">☰</i>
+                    <i class="closeIcon material-icons">x</i>
+                </button>
             </div>
         </nav>
         <div class="conteiner-1200 texto-intro">
@@ -257,5 +261,29 @@
             <p class="font-2-m p5"><strong>2023 © EmpireBurger.</strong> Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script defer>
+        const menu = document.querySelector(".menu-hamburguer");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburguer= document.querySelector(".hamburguer");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+                menu.classList.remove("showMenu");
+                closeIcon.style.display = "none";
+                menuIcon.style.display = "block";
+                console.log('if')
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+            console.log('else')
+        }
+        }
+        console.log(hamburguer)
+        hamburguer.addEventListener("click", toggleMenu);
+
+    </script>
 </body>
 </html>

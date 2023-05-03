@@ -28,6 +28,10 @@
     max-width: 40ch;
 }
 
+.atendimento a {
+    box-shadow: 3px 3px 3px rgba(98, 98, 98, 0.258);
+}
+
 @media (max-width:1000px) {
     .atendimento-img img {
         width: 100%;

@@ -116,7 +116,7 @@ body {
     transition: .3s;
 }
 
-.hamburger {
+.hamburguer {
     position: absolute;
     z-index: 101;
     top: 1rem;

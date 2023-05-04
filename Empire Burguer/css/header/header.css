@@ -116,21 +116,6 @@ body {
     transition: .3s;
 }
 
-.hamburguer {
-    position: absolute;
-    z-index: 101;
-    top: 1rem;
-    right: 1rem;
-    padding: 4px;
-    border: none;
-    background: rgba(255, 255, 255, 0.574);
-    cursor: pointer;
-  }
-
-  .closeIcon {
-    display: none;
-  }
-
   .menu {
     display: flex;
     flex-direction: row;
@@ -140,24 +125,9 @@ body {
     border-bottom: 1px solid var(--p3);
 }
 
-  .menu-hamburguer {
-    position: fixed;
-    transform: translateY(-100%);
-    transition: transform 0.2s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    background: rgba(80, 72, 72, 0.415);
-    color: white;
-    list-style: none;
-    padding-top: 4rem;
-  }
-
-  .showMenu {
-    transform: translateY(0);
-  }
+.hamburguer {
+    display: none;
+}
 
 
 @media (max-width:950px) {
@@ -165,8 +135,79 @@ body {
         font-size: 3.5rem;
     }
 
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
     .menu ul li {
         padding: 0px 5px;
+    }
+
+    .menu-esquerda li {
+        display: none;
+    }
+
+    .hamburguer {
+        display: block;
+        z-index: 101;
+        top: 0.3rem;
+        right: 1rem;
+        padding: 8px 12px;
+        border: none;
+        background: rgba(29, 6, 5, 0.15);
+        color: var(--w);
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .closeIcon {
+        display: none;
+    }
+
+    .menu-hamburguer{
+        position: absolute;
+        display: flex;
+        flex-direction: column; 
+        transform: translateY(-300%);
+        transition: transform 0.2s;
+        margin-top: 17rem;
+        right: 20px;   
+        z-index: 100;
+        color: rgba(29, 6, 5, 0.9);
+        list-style: none;
+        padding-top: 4rem;
+        border-radius: 5px;
+    }
+
+    .menu-hamburguer::before {
+        content: '';
+        position: absolute;
+        background: rgba(233, 192, 189, 0.74);
+        width: 120px;
+        height: 140px;
+        border-radius: 5px;
+        top: -80px;
+        left: -10px;
+        z-index: -1;
+    }
+
+    button.hamburguer {
+        position: relative;
+    }
+
+    .showMenu {
+        transform: translateY(0);
+    }
+
+    .menuItem {
+        display: flex;
+        margin: -50px auto 0 auto;
     }
 
 }

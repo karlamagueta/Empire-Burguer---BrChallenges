@@ -156,7 +156,7 @@ body {
     .hamburguer {
         display: block;
         z-index: 101;
-        top: 0.3rem;
+        top: 0.1rem;
         right: 1rem;
         padding: 8px 12px;
         border: none;
